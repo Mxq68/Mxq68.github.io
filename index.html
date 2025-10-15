@@ -8,11 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
-    <!-- 引入EmailJS新版SDK（关键修改：替换为2.3.2版本） -->
-    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
-    
-    <!-- Tailwind 配置 -->
-    <script>
+    <!-- 引入EmailJS新版SDK -->
+    <script type="text/tailwindcss">
         tailwind.config = {
             theme: {
                 extend: {
@@ -51,16 +48,6 @@
             }
         }
     </style>
-
-    <!-- EmailJS初始化（关键修改：新版初始化格式） -->
-    <script type="text/javascript">
-        (function(){
-            // 新版要求通过对象传入公钥，publicKey值保持不变
-            emailjs.init({
-                publicKey: "vKtIiGlMYis0V1zun" // 需替换为你的EmailJS公钥
-            });
-        })();
-    </script>
 </head>
 
 <body class="bg-gray-50 text-dark font-sans">
@@ -99,7 +86,7 @@
         </div>
     </header>
 
-    <!-- 英雄区域 -->
+    <!-- 英雄区域（已更新社交链接） -->
     <section class="pt-32 pb-20 md:pt-40 md:pb-32 bg-gradient-to-br from-primary/5 to-secondary/10">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center gap-12">
@@ -122,18 +109,18 @@
                             <i class="fa fa-folder-open"></i> 查看项目
                         </a>
                     </div>
+                    <!-- 已统一社交链接：与“联系我”区域一致 -->
                     <div class="flex gap-4 pt-6">
-                        <!-- 社交图标预览 -->
                         <a href="https://space.bilibili.com/3546694857787631" target="_blank" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-[#FB7299] hover:text-white transition-all">
                             <i class="fa fa-play-circle"></i>
                         </a>
-                        <a href="https://v.douyin.com/iYdX7f5T/" target="_blank" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-[#000000] hover:text-white transition-all">
+                        <a href="https://www.douyin.com/user/self?from_tab_name=main" target="_blank" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-[#000000] hover:text-white transition-all">
                             <i class="fa fa-music"></i>
                         </a>
                         <a href="https://weibo.com/xuan709" target="_blank" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-[#E6162D] hover:text-white transition-all">
                             <i class="fa fa-weibo"></i>
                         </a>
-                        <a href="https://www.xiaohongshu.com/user/profile/6788924424" target="_blank" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-[#FE2C55] hover:text-white transition-all">
+                        <a href="https://www.xiaohongshu.com/user/profile/636b164f000000001f01ff30" target="_blank" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-[#FE2C55] hover:text-white transition-all">
                             <i class="fa fa-book"></i>
                         </a>
                     </div>
@@ -573,7 +560,7 @@
         </div>
     </section>
 
-    <!-- 联系我 -->
+    <!-- 联系我（已删除表单，新增快速联系工具） -->
     <section id="contact" class="py-20 bg-gradient-to-br from-primary/5 to-secondary/10">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -585,6 +572,7 @@
             </div>
             
             <div class="flex flex-col lg:flex-row gap-12">
+                <!-- 左侧：联系方式 -->
                 <div class="lg:w-1/3">
                     <div class="bg-white p-8 rounded-xl shadow-md h-full">
                         <h3 class="text-2xl font-bold mb-6">联系方式</h3>
@@ -634,19 +622,15 @@
                         <div class="mt-10">
                             <h4 class="font-semibold mb-4">关注我</h4>
                             <div class="flex gap-4">
-                                <!-- 哔哩哔哩图标及跳转链接 -->
                                 <a href="https://space.bilibili.com/3546694857787631" target="_blank" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-[#FB7299] hover:text-white transition-all">
                                     <i class="fa fa-play-circle"></i>
                                 </a>
-                                <!-- 抖音图标及跳转链接 -->
-                                <a href="https://www.douyin.com/user/self?from_tab_name=main" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-[#000000] hover:text-white transition-all">
+                                <a href="https://www.douyin.com/user/self?from_tab_name=main" target="_blank" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-[#000000] hover:text-white transition-all">
                                     <i class="fa fa-music"></i>
                                 </a>
-                                <!-- 微博图标及跳转链接 -->
                                 <a href="https://weibo.com/xuan709" target="_blank" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-[#E6162D] hover:text-white transition-all">
                                     <i class="fa fa-weibo"></i>
                                 </a>
-                                <!-- 小红书图标及跳转链接 -->
                                 <a href="https://www.xiaohongshu.com/user/profile/636b164f000000001f01ff30" target="_blank" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-[#FE2C55] hover:text-white transition-all">
                                     <i class="fa fa-book"></i>
                                 </a>
@@ -655,37 +639,57 @@
                     </div>
                 </div>
                 
+                <!-- 右侧：删除表单，新增快速联系工具 -->
                 <div class="lg:w-2/3">
                     <div class="bg-white p-8 rounded-xl shadow-md">
-                        <h3 class="text-2xl font-bold mb-6">发送消息</h3>
+                        <h3 class="text-2xl font-bold mb-6">快速联系工具</h3>
                         
-                        <form id="contact-form" class="space-y-6">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label for="name" class="block text-gray-700 font-medium mb-2">姓名</label>
-                                    <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all" placeholder="请输入您的姓名" required>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <!-- 微信二维码卡片 -->
+                            <div class="bg-gray-50 p-6 rounded-xl text-center card-hover">
+                                <div class="w-48 h-48 mx-auto bg-white p-2 rounded-lg border border-gray-200 mb-4">
+                                    <!-- 此处可替换为实际微信二维码图片 -->
+                                    <img src="https://picsum.photos/id/237/200/200" alt="微信二维码" class="w-full h-full object-cover">
                                 </div>
+                                <h4 class="text-lg font-semibold mb-2">扫码添加微信</h4>
+                                <p class="text-gray-600 text-sm">微信ID：yt9vkjb622</p>
+                            </div>
+                            
+                            <!-- 快捷操作卡片 -->
+                            <div class="space-y-6">
+                                <!-- 电话一键拨打 -->
+                                <a href="tel:19394275241" class="block bg-primary/5 p-6 rounded-xl flex items-center gap-4 card-hover">
+                                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                                        <i class="fa fa-phone text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold">一键拨打</h4>
+                                        <p class="text-gray-600">19394275241</p>
+                                    </div>
+                                </a>
                                 
-                                <div>
-                                    <label for="email" class="block text-gray-700 font-medium mb-2">邮箱</label>
-                                    <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all" placeholder="请输入您的邮箱" required>
-                                </div>
+                                <!-- 邮箱一键发送 -->
+                                <a href="mailto:jyy258497@gmail.com?subject=来自个人网站的联系" class="block bg-primary/5 p-6 rounded-xl flex items-center gap-4 card-hover">
+                                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                                        <i class="fa fa-envelope text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold">一键发邮件</h4>
+                                        <p class="text-gray-600">jyy258497@gmail.com</p>
+                                    </div>
+                                </a>
                             </div>
-                            
-                            <div>
-                                <label for="subject" class="block text-gray-700 font-medium mb-2">主题</label>
-                                <input type="text" id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all" placeholder="请输入消息主题" required>
-                            </div>
-                            
-                            <div>
-                                <label for="message" class="block text-gray-700 font-medium mb-2">消息内容</label>
-                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all" placeholder="请输入您的消息内容" required></textarea>
-                            </div>
-                            
-                            <button type="submit" id="submit-btn" class="px-6 py-3 bg-primary text-white rounded-lg shadow-md hover:bg-primary/90 transition-all flex items-center gap-2">
-                                <i class="fa fa-paper-plane"></i> 发送消息
-                            </button>
-                        </form>
+                        </div>
+                        
+                        <!-- 工作时间提示 -->
+                        <div class="mt-8 bg-secondary/5 p-6 rounded-xl">
+                            <h4 class="text-lg font-semibold mb-3 flex items-center gap-2">
+                                <i class="fa fa-clock-o text-secondary"></i> 工作时间
+                            </h4>
+                            <p class="text-gray-600">周一至周五：9:00 - 18:00</p>
+                            <p class="text-gray-600 mt-1">周末：10:00 - 16:00（节假日除外）</p>
+                            <p class="text-gray-500 text-sm mt-2">通常会在24小时内回复消息</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -716,17 +720,16 @@
                 <p class="text-gray-400 text-sm">© 2023 马学清的个人网站. 保留所有权利.</p>
                 
                 <div class="flex gap-4 mt-4 md:mt-0">
-                    <!-- 页脚社交图标 -->
                     <a href="https://space.bilibili.com/3546694857787631" target="_blank" class="text-gray-400 hover:text-white transition-colors">
                         <i class="fa fa-play-circle"></i>
                     </a>
-                    <a href="https://v.douyin.com/iYdX7f5T/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                    <a href="https://www.douyin.com/user/self?from_tab_name=main" target="_blank" class="text-gray-400 hover:text-white transition-colors">
                         <i class="fa fa-music"></i>
                     </a>
                     <a href="https://weibo.com/xuan709" target="_blank" class="text-gray-400 hover:text-white transition-colors">
                         <i class="fa fa-weibo"></i>
                     </a>
-                    <a href="https://www.xiaohongshu.com/user/profile/6788924424" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                    <a href="https://www.xiaohongshu.com/user/profile/636b164f000000001f01ff30" target="_blank" class="text-gray-400 hover:text-white transition-colors">
                         <i class="fa fa-book"></i>
                     </a>
                 </div>
@@ -739,7 +742,7 @@
         <i class="fa fa-arrow-up"></i>
     </button>
 
-    <!-- JavaScript -->
+    <!-- JavaScript（删除表单相关代码，保留其他功能） -->
     <script>
         // 导航栏滚动效果
         const navbar = document.getElementById('navbar');
@@ -771,8 +774,6 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
-                // 关闭移动菜单（如果打开）
                 mobileMenu.classList.add('hidden');
                 
                 const targetId = this.getAttribute('href');
@@ -802,19 +803,15 @@
         
         skillTabs.forEach(tab => {
             tab.addEventListener('click', function() {
-                // 移除所有标签的active类
                 skillTabs.forEach(t => {
                     t.classList.remove('active', 'bg-primary', 'text-white');
                     t.classList.add('bg-gray-200', 'text-gray-700');
                 });
                 
-                // 给当前标签添加active类
                 this.classList.add('active', 'bg-primary', 'text-white');
                 this.classList.remove('bg-gray-200', 'text-gray-700');
                 
                 const category = this.getAttribute('data-tab');
-                
-                // 显示或隐藏技能卡片
                 skillCards.forEach(card => {
                     if (category === 'all' || card.getAttribute('data-category') === category) {
                         card.style.display = 'block';
@@ -901,38 +898,8 @@
             }
         );
         
-        // 联系表单提交（发送到邮箱）- 此处逻辑保持不变，新版SDK兼容旧版发送方法
-        const contactForm = document.getElementById('contact-form');
-        const submitBtn = document.getElementById('submit-btn');
-        
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> 发送中...';
-            submitBtn.disabled = true;
-            
-            // 使用EmailJS发送邮件到邮箱
-            emailjs.send("service_oenjwoq", "template_qr7q3wo", {
-                from_name: document.getElementById('name').value,
-                from_email: document.getElementById('email').value,
-                subject: document.getElementById('subject').value,
-                message: document.getElementById('message').value,
-                to_email: "jyy258497@gmail.com" // 接收邮件的邮箱
-            })
-            .then(function(response) {
-                alert('消息发送成功！我会尽快回复您。');
-                contactForm.reset();
-                submitBtn.innerHTML = '<i class="fa fa-paper-plane"></i> 发送消息';
-                submitBtn.disabled = false;
-            }, function(error) {
-                alert('消息发送失败，请稍后重试！错误信息：' + error.text);
-                submitBtn.innerHTML = '<i class="fa fa-paper-plane"></i> 发送消息';
-                submitBtn.disabled = false;
-            });
-        });
-        
         // 页面加载完成后的动画
         window.addEventListener('load', function() {
-            // 为技能条添加动画
             setTimeout(() => {
                 document.querySelectorAll('.skill-progress').forEach(progress => {
                     const width = progress.style.width;
