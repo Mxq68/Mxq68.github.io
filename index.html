@@ -8,8 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
-    <!-- 引入EmailJS用于表单发送 -->
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <!-- 引入EmailJS新版SDK（关键修改：替换为2.3.2版本） -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
     
     <!-- Tailwind 配置 -->
     <script>
@@ -52,10 +52,13 @@
         }
     </style>
 
-    <!-- EmailJS初始化 -->
+    <!-- EmailJS初始化（关键修改：新版初始化格式） -->
     <script type="text/javascript">
         (function(){
-            emailjs.init("_nSnQAMoUTJj7Skui"); // 需替换为你的EmailJS公钥
+            // 新版要求通过对象传入公钥，publicKey值保持不变
+            emailjs.init({
+                publicKey: "_nSnQAMoUTJj7Skui" // 需替换为你的EmailJS公钥
+            });
         })();
     </script>
 </head>
@@ -898,7 +901,7 @@
             }
         );
         
-        // 联系表单提交（发送到邮箱）
+        // 联系表单提交（发送到邮箱）- 此处逻辑保持不变，新版SDK兼容旧版发送方法
         const contactForm = document.getElementById('contact-form');
         const submitBtn = document.getElementById('submit-btn');
         
@@ -943,4 +946,3 @@
     </script>
 </body>
 </html>
-    
