@@ -55,7 +55,7 @@
     <!-- EmailJS初始化 -->
     <script type="text/javascript">
         (function(){
-            emailjs.init("YOUR_EMAILJS_PUBLIC_KEY"); // 需替换为你的EmailJS公钥
+            emailjs.init("_nSnQAMoUTJj7Skui"); // 需替换为你的EmailJS公钥
         })();
     </script>
 </head>
@@ -908,7 +908,7 @@
             submitBtn.disabled = true;
             
             // 使用EmailJS发送邮件到邮箱
-            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+            emailjs.send("service_oenjwoq", "template_qr7q3wo", {
                 from_name: document.getElementById('name').value,
                 from_email: document.getElementById('email').value,
                 subject: document.getElementById('subject').value,
