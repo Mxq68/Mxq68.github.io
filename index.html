@@ -593,7 +593,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-semibold mb-1">邮箱</h4>
-                                    <p class="text-gray-600">1179489479@qq.com</p>
+                                    <p class="text-gray-600">jyy258497@gmail.com</p>
                                 </div>
                             </div>
                             
@@ -636,7 +636,7 @@
                                     <i class="fa fa-play-circle"></i>
                                 </a>
                                 <!-- 抖音图标及跳转链接 -->
-                                <a href="https://v.douyin.com/iYdX7f5T/" target="_blank" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-[#000000] hover:text-white transition-all">
+                                <a href="https://www.douyin.com/user/self?from_tab_name=main" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-[#000000] hover:text-white transition-all">
                                     <i class="fa fa-music"></i>
                                 </a>
                                 <!-- 微博图标及跳转链接 -->
@@ -644,7 +644,7 @@
                                     <i class="fa fa-weibo"></i>
                                 </a>
                                 <!-- 小红书图标及跳转链接 -->
-                                <a href="https://www.xiaohongshu.com/user/profile/6788924424" target="_blank" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-[#FE2C55] hover:text-white transition-all">
+                                <a href="https://www.xiaohongshu.com/user/profile/636b164f000000001f01ff30" target="_blank" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-[#FE2C55] hover:text-white transition-all">
                                     <i class="fa fa-book"></i>
                                 </a>
                             </div>
@@ -898,7 +898,7 @@
             }
         );
         
-        // 联系表单提交（发送到QQ邮箱）
+        // 联系表单提交（发送到邮箱）
         const contactForm = document.getElementById('contact-form');
         const submitBtn = document.getElementById('submit-btn');
         
@@ -907,13 +907,13 @@
             submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> 发送中...';
             submitBtn.disabled = true;
             
-            // 使用EmailJS发送邮件到QQ邮箱
+            // 使用EmailJS发送邮件到邮箱
             emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
                 from_name: document.getElementById('name').value,
                 from_email: document.getElementById('email').value,
                 subject: document.getElementById('subject').value,
                 message: document.getElementById('message').value,
-                to_email: "jyy258497@gmail.com" // 接收邮件的QQ邮箱
+                to_email: "jyy258497@gmail.com" // 接收邮件的邮箱
             })
             .then(function(response) {
                 alert('消息发送成功！我会尽快回复您。');
