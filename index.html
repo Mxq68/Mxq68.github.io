@@ -8,6 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+    <!-- 引入EmailJS用于表单发送 -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     
     <!-- Tailwind 配置 -->
     <script>
@@ -49,6 +51,13 @@
             }
         }
     </style>
+
+    <!-- EmailJS初始化 -->
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("YOUR_EMAILJS_PUBLIC_KEY"); // 需替换为你的EmailJS公钥
+        })();
+    </script>
 </head>
 
 <body class="bg-gray-50 text-dark font-sans">
@@ -111,17 +120,18 @@
                         </a>
                     </div>
                     <div class="flex gap-4 pt-6">
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition-all">
-                            <i class="fa fa-github"></i>
+                        <!-- 社交图标预览 -->
+                        <a href="https://space.bilibili.com/3546694857787631" target="_blank" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-[#FB7299] hover:text-white transition-all">
+                            <i class="fa fa-play-circle"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition-all">
-                            <i class="fa fa-linkedin"></i>
+                        <a href="https://v.douyin.com/iYdX7f5T/" target="_blank" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-[#000000] hover:text-white transition-all">
+                            <i class="fa fa-music"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition-all">
-                            <i class="fa fa-codepen"></i>
+                        <a href="https://weibo.com/xuan709" target="_blank" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-[#E6162D] hover:text-white transition-all">
+                            <i class="fa fa-weibo"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition-all">
-                            <i class="fa fa-youtube-play"></i>
+                        <a href="https://www.xiaohongshu.com/user/profile/6788924424" target="_blank" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-[#FE2C55] hover:text-white transition-all">
+                            <i class="fa fa-book"></i>
                         </a>
                     </div>
                 </div>
@@ -621,17 +631,21 @@
                         <div class="mt-10">
                             <h4 class="font-semibold mb-4">关注我</h4>
                             <div class="flex gap-4">
-                                <a href="#" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition-all">
-                                    <i class="fa fa-github"></i>
+                                <!-- 哔哩哔哩图标及跳转链接 -->
+                                <a href="https://space.bilibili.com/3546694857787631" target="_blank" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-[#FB7299] hover:text-white transition-all">
+                                    <i class="fa fa-play-circle"></i>
                                 </a>
-                                <a href="#" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition-all">
-                                    <i class="fa fa-linkedin"></i>
+                                <!-- 抖音图标及跳转链接 -->
+                                <a href="https://v.douyin.com/iYdX7f5T/" target="_blank" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-[#000000] hover:text-white transition-all">
+                                    <i class="fa fa-music"></i>
                                 </a>
-                                <a href="#" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition-all">
-                                    <i class="fa fa-csdn"></i>
+                                <!-- 微博图标及跳转链接 -->
+                                <a href="https://weibo.com/xuan709" target="_blank" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-[#E6162D] hover:text-white transition-all">
+                                    <i class="fa fa-weibo"></i>
                                 </a>
-                                <a href="#" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition-all">
-                                    <i class="fa fa-bilibili"></i>
+                                <!-- 小红书图标及跳转链接 -->
+                                <a href="https://www.xiaohongshu.com/user/profile/6788924424" target="_blank" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-[#FE2C55] hover:text-white transition-all">
+                                    <i class="fa fa-book"></i>
                                 </a>
                             </div>
                         </div>
@@ -646,26 +660,26 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label for="name" class="block text-gray-700 font-medium mb-2">姓名</label>
-                                    <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all" placeholder="请输入您的姓名">
+                                    <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all" placeholder="请输入您的姓名" required>
                                 </div>
                                 
                                 <div>
                                     <label for="email" class="block text-gray-700 font-medium mb-2">邮箱</label>
-                                    <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all" placeholder="请输入您的邮箱">
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all" placeholder="请输入您的邮箱" required>
                                 </div>
                             </div>
                             
                             <div>
                                 <label for="subject" class="block text-gray-700 font-medium mb-2">主题</label>
-                                <input type="text" id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all" placeholder="请输入消息主题">
+                                <input type="text" id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all" placeholder="请输入消息主题" required>
                             </div>
                             
                             <div>
                                 <label for="message" class="block text-gray-700 font-medium mb-2">消息内容</label>
-                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all" placeholder="请输入您的消息内容"></textarea>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all" placeholder="请输入您的消息内容" required></textarea>
                             </div>
                             
-                            <button type="submit" class="px-6 py-3 bg-primary text-white rounded-lg shadow-md hover:bg-primary/90 transition-all flex items-center gap-2">
+                            <button type="submit" id="submit-btn" class="px-6 py-3 bg-primary text-white rounded-lg shadow-md hover:bg-primary/90 transition-all flex items-center gap-2">
                                 <i class="fa fa-paper-plane"></i> 发送消息
                             </button>
                         </form>
@@ -699,17 +713,18 @@
                 <p class="text-gray-400 text-sm">© 2023 马学清的个人网站. 保留所有权利.</p>
                 
                 <div class="flex gap-4 mt-4 md:mt-0">
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fa fa-github"></i>
+                    <!-- 页脚社交图标 -->
+                    <a href="https://space.bilibili.com/3546694857787631" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fa fa-play-circle"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fa fa-linkedin"></i>
+                    <a href="https://v.douyin.com/iYdX7f5T/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fa fa-music"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fa fa-codepen"></i>
+                    <a href="https://weibo.com/xuan709" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fa fa-weibo"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fa fa-youtube-play"></i>
+                    <a href="https://www.xiaohongshu.com/user/profile/6788924424" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fa fa-book"></i>
                     </a>
                 </div>
             </div>
@@ -859,13 +874,13 @@
                         data: [35, 25, 30, 10],
                         backgroundColor: [
                             'rgba(22, 93, 255, 0.8)',
-                            'rgba(54, 207, 201, 0.8)',
+                            'rgba(54, 207, 209, 0.8)',
                             'rgba(114, 46, 209, 0.8)',
                             'rgba(255, 193, 7, 0.8)'
                         ],
                         borderColor: [
                             'rgba(22, 93, 255, 1)',
-                            'rgba(54, 207, 201, 1)',
+                            'rgba(54, 207, 209, 1)',
                             'rgba(114, 46, 209, 1)',
                             'rgba(255, 193, 7, 1)'
                         ],
@@ -883,15 +898,33 @@
             }
         );
         
-        // 表单提交
+        // 联系表单提交（发送到QQ邮箱）
         const contactForm = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
         
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
+            submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> 发送中...';
+            submitBtn.disabled = true;
             
-            // 这里可以添加表单验证和提交逻辑
-            alert('消息发送成功！我会尽快回复您。');
-            contactForm.reset();
+            // 使用EmailJS发送邮件到QQ邮箱
+            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+                from_name: document.getElementById('name').value,
+                from_email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+                to_email: "1179489479@qq.com" // 接收邮件的QQ邮箱
+            })
+            .then(function(response) {
+                alert('消息发送成功！我会尽快回复您。');
+                contactForm.reset();
+                submitBtn.innerHTML = '<i class="fa fa-paper-plane"></i> 发送消息';
+                submitBtn.disabled = false;
+            }, function(error) {
+                alert('消息发送失败，请稍后重试！错误信息：' + error.text);
+                submitBtn.innerHTML = '<i class="fa fa-paper-plane"></i> 发送消息';
+                submitBtn.disabled = false;
+            });
         });
         
         // 页面加载完成后的动画
@@ -910,3 +943,4 @@
     </script>
 </body>
 </html>
+    
