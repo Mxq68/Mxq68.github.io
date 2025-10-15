@@ -683,7 +683,7 @@
                             </div>
                             
                             <button type="submit" id="submit-btn" class="px-6 py-3 bg-primary text-white rounded-lg shadow-md hover:bg-primary/90 transition-all flex items-center gap-2">
-                                <i class="fa fa-paper-plane"></i> 非常抱歉，此功能尚未实现
+                                <i class="fa fa-paper-plane"></i> 发送消息
                             </button>
                         </form>
                     </div>
@@ -924,7 +924,7 @@
                 submitBtn.innerHTML = '<i class="fa fa-paper-plane"></i> 发送消息';
                 submitBtn.disabled = false;
             }, function(error) {
-                alert('消息发送失败，请稍后重试！错误信息：' + error.text);
+                alert('功能暂未实现，敬请期待！错误信息：' + error.text);
                 submitBtn.innerHTML = '<i class="fa fa-paper-plane"></i> 发送消息';
                 submitBtn.disabled = false;
             });
